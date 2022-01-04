@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website | Vanilla Javascript</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="nor.png" id="nor1">
+        <img src="nor.png" id="nor2">
+        <img src="nor.png" id="nor3">
+        <img src="sun.png" id="sun">
+        <h2 id="text">Sun light</h2>
+        <a href="#sec" class="btn" id="btn">Find out more</a>
+        <img src="field.png" id="field">
+    </section>
+    <div class="sec" id="sec">
+        <h2>A Beautifull Sun Ray</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+             culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Expedita quod molestias
+               provident unde vero corporis eligendi tenetur voluptatem quidem animi,
+                rem eveniet non minus nulla praesentium recusandae earum sit deleniti. Lorem 
+                ipsum dolor sit amet, consectetur adipisicing elit. Rem sapiente asperiores
+                 possimus reiciendis molestias necessitatibus ducimus corrupti quo, dolorem
+                  est tenetur debitis amet ratione nemo fugit a optio nobis facere?<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                  nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                   pariatur.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                   nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                   reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                    culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+                     dolor sit amet consectetur adipisicing elit. Expedita quod molestias
+                      provident unde vero corporis eligendi tenetur voluptatem quidem animi,
+                       rem eveniet non minus nulla praesentium recusandae earum sit deleniti. Lorem 
+                       ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                       nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                       reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+                         dolor sit amet consectetur adipisicing elit. Expedita quod molestias
+                          provident unde vero corporis eligendi tenetur voluptatem quidem animi,
+                           rem eveniet non minus nulla praesentium recusandae earum sit deleniti. Lorem 
+                           ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <script>
+        let cloud1 =document.getElementById('nor1');
+        let cloud2 = document.getElementById('nor2');
+        let cloud3 = document.getElementById('nor3');
+        let sun = document.getElementById('sun');
+        let field = document.getElementById('field');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            
+            cloud1.style.left =100 + value + 'px';
+            cloud2.style.left =1500- value + 'px';
+            cloud3.style.left = 1200 - value + 'px';
+            sun.style.top = 200 + value + 'px';
+            text.style.marginLeft = value * 4 + 'px';
+            btn.style.marginRight = value * 4 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
